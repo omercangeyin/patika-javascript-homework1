@@ -25,6 +25,10 @@ function showTime() {
         day = "Cumartesi"
     }
 
+    hour = (hour < 10) ? "0" + hour : hour
+    minute = (minute < 10) ? "0" + minute : minute
+    second = (second < 10) ? "0" + second : second
+
     let time = `Bugun ${day} ve saat:${hour}.${minute}.${second}`
     myClock.innerHTML = time
     setTimeout(showTime, 1000)
